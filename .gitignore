@@ -1,0 +1,20 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+node_modules/
+dist/
+backend/uploads/
+backend/backups/
+backups/
+backend/models/*.pt
+backend/models/labels.json
+backend/models/metrics.json
+# Database backup files
+*.sql
+*.dump
+
+# Keep the backup for the buyer
+!Database-Backup/*.dump

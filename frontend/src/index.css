@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+  --bg-dark: #0A120D;
+  --surface-dark: #0E1812;
+  --surface-card: #132118;
+  --border-dark: rgba(52, 211, 153, 0.12);
+  --text-main: #F1F5F9;
+  --text-muted: #94A3B8;
+  --accent-emerald: #10B981;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background-color: #070C09;
+  scroll-behavior: smooth;
+  font-family: 'Cairo', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #0A120D;
+  color: #F1F5F9;
+  font-family: 'Cairo', system-ui, sans-serif;
+  direction: rtl;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 80%, rgba(5, 150, 105, 0.08), transparent);
+  background-attachment: fixed;
+}
+
+/* Custom Dark Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0A120D;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E3527;
+  border-radius: 9999px;
+  border: 1px solid rgba(52, 211, 153, 0.1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #274835;
+}
+
+::selection {
+  background: rgba(16, 185, 129, 0.35);
+  color: #FFFFFF;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* Modern Dark Recharts Tooltips and Grids */
+.recharts-cartesian-grid-line {
+  stroke: rgba(52, 211, 153, 0.08) !important;
+}
+.recharts-text {
+  fill: #94A3B8 !important;
+  font-family: 'Cairo', sans-serif !important;
+  font-size: 12px;
+}
+.recharts-default-tooltip {
+  background-color: #0E1812 !important;
+  border: 1px solid rgba(52, 211, 153, 0.25) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+  color: #F8FAFC !important;
+}
+
+/* Floating & Glow Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Tech Grid Background Utility */
+.bg-grid-pattern {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(52, 211, 153, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(52, 211, 153, 0.04) 1px, transparent 1px);
+}
